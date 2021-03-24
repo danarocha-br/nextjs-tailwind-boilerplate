@@ -4,6 +4,7 @@ import {
   DefaultTheme,
   GlobalStyleComponent,
 } from 'styled-components';
+import tw, { GlobalStyles as TailwindGlobal } from 'twin.macro';
 
 import tokens from './tokens';
 
@@ -11,15 +12,15 @@ type GlobalStylesProps = {
   removeBg?: boolean;
 };
 
-const GlobalStyles: GlobalStyleComponent<
+const CustomStyles: GlobalStyleComponent<
   GlobalStylesProps,
   DefaultTheme
 > = createGlobalStyle`
   * {
+    ${tw`antialiased`}
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    -webkit-font-smoothing: antialised;
     -moz-osx-font-smoothing: grayscale;
 
     &::before,
@@ -41,6 +42,7 @@ const GlobalStyles: GlobalStyleComponent<
       ${!removeBg &&
       css`
         background-color: ${theme.colors.white};
+        -webkit-tap-highlight-color: ${theme.colors.brand};
       `}
     }
 
@@ -72,5 +74,14 @@ const GlobalStyles: GlobalStyleComponent<
     }
   `}
 `;
+
+const GlobalStyles = () => {
+  return (
+    <>
+      <TailwindGlobal />
+      <CustomStyles />
+    </>
+  );
+};
 
 export default GlobalStyles;

@@ -1,8 +1,9 @@
 {
   "presets": [
-    "next/babel", "@babel/preset-typescript"
+    ["next/babel", { "preset-react": { "runtime": "automatic" } }], "@babel/preset-typescript"
   ],
   "plugins": [
+    "babel-plugin-macros",
     [
       "babel-plugin-styled-components",
       {
@@ -14,6 +15,7 @@
   "env": {
     "test": {
       "plugins": [
+        "babel-plugin-macros",
         [
           "babel-plugin-styled-components",
           {
@@ -24,4 +26,4 @@
       ]
     }
   }
-} 
+}

@@ -45,6 +45,7 @@
     "@typescript-eslint/eslint-plugin": "^4.19.0",
     "@typescript-eslint/parser": "^4.19.0",
     "babel-loader": "^8.2.2",
+    "babel-plugin-macros": "^3.0.1",
     "babel-plugin-styled-components": "^1.12.0",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
@@ -57,10 +58,13 @@
     "lint-staged": "^10.5.4",
     "plop": "^2.7.4",
     "prettier": "2.2.1",
+    "react-is": "^17.0.2",
     "storybook-addon-designs": "^5.4.5",
     "storybook-addon-next-router": "^2.0.4",
     "storybook-mobile": "^0.1.30",
     "storybook-styled-components-theme-selector": "^1.1.0",
+    "tailwindcss": "^2.0.4",
+    "twin.macro": "^2.3.1",
     "typescript": "^4.2.3"
   }
 }
