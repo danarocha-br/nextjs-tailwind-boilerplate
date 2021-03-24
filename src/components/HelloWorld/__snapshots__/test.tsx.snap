@@ -6,6 +6,7 @@ exports[
 .c0 {
   --tw-text-opacity: 1;
   color: rgba(255,255,255,var(--tw-text-opacity));
+  font-size: 3.2rem;
   background-color: #1D2324;
 }
 

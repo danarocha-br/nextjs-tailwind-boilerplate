@@ -6,8 +6,6 @@ import {
 } from 'styled-components';
 import tw, { GlobalStyles as TailwindGlobal } from 'twin.macro';
 
-import tokens from './tokens';
-
 type GlobalStylesProps = {
   removeBg?: boolean;
 };
@@ -17,19 +15,10 @@ const CustomStyles: GlobalStyleComponent<
   DefaultTheme
 > = createGlobalStyle`
   * {
-    ${tw`antialiased`}
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -moz-osx-font-smoothing: grayscale;
-
-    &::before,
-    &::after {
-      box-sizing: inherit;
-    }
+    ${tw`antialiased`};
 
     button {
-      cursor: pointer;
+      ${tw`cursor-pointer`};
     }
   }
 
@@ -37,7 +26,6 @@ const CustomStyles: GlobalStyleComponent<
     html {
       font-size: 62.5%;
     }
-
     body {
       ${!removeBg &&
       css`
@@ -47,30 +35,25 @@ const CustomStyles: GlobalStyleComponent<
     }
 
     [disabled] {
-      cursor: not-allowed;
+      ${tw`cursor-not-allowed`};
     }
 
     html,
     body,
     #__next {
-      height: 100%;
+      ${tw`h-full`}
     }
 
     body,
     button,
     input,
     textarea {
-      font-family: ${tokens.font.family};
-      font-size: ${tokens.font.sizes.base};
-      font-weight: 400;
-      font-style: normal;
+      ${tw`font-sans`}
       font-display: swap;
     }
 
     button {
-      outline: none;
-      border: none;
-      cursor: pointer;
+      ${tw`outline-none border-none cursor-pointer`}
     }
   `}
 `;

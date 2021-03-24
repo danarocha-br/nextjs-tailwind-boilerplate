@@ -6,8 +6,8 @@ import { withDesign } from 'storybook-addon-designs';
 
 import GlobalStyles from 'styles/global';
 import { lightTheme, darkTheme } from 'styles/themes';
-import tokens from 'styles/tokens';
 import theme from './theme';
+import tokens from '../tailwind.config.js';
 
 
 export const parameters = {
@@ -17,11 +17,11 @@ export const parameters = {
     values: [
       {
         name: 'light',
-        value: tokens.colors.gray[100],
+        value: tokens.theme.colors.gray[100],
       },
       {
         name: 'dark',
-        value: tokens.colors.gray[900],
+        value: tokens.theme.colors.gray[900],
       },
     ],
   },

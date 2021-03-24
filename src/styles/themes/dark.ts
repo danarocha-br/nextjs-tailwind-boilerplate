@@ -1,14 +1,14 @@
-import tokens from '../tokens';
+import tokens from '../../../tailwind.config.js';
 
 export default {
   id: 'dark',
   colors: {
-    brand: tokens.colors.brand,
-    white: tokens.colors.white,
+    brand: tokens.theme.colors.brand,
+    white: tokens.theme.colors.white,
   },
 
   text: {
-    main: tokens.colors.white,
-    secondary: tokens.colors.gray[100],
+    main: tokens.theme.colors.white,
+    secondary: tokens.theme.colors.gray[200],
   },
 } as const;
